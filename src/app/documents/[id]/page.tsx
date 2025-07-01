@@ -6,13 +6,13 @@ import PublicDocumentViewer from './PublicDocumentViewer';
 import Link from 'next/link';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function DocumentPage({ params }: PageProps) {
-  const { id } = params;
+  const { id } = await params;
   const session = await getSession();
 
   // Fetch the document
