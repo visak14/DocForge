@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getSession } from '../../../../lib/getSession';
 import { prisma } from '../../../../lib/prisma';
 import PublicDocumentViewer from './PublicDocumentViewer';
+import Link from 'next/link';
 
 interface PageProps {
   params: {
@@ -57,14 +58,14 @@ export default async function DocumentPage({ params }: PageProps) {
             Access Denied
           </h1>
           <p className="text-gray-600 mb-4">
-            You don't have permission to view this document.
+           Don&apos;t have permission to view this document.
           </p>
-          <a 
+          <Link 
             href="/documents" 
             className="text-blue-600 hover:text-blue-800 underline"
           >
             Go to your documents
-          </a>
+          </Link>
         </div>
       </div>
     );
