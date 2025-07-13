@@ -29,7 +29,7 @@ export default function SignUp() {
       
     } catch (err) {
        console.error('Registration error:', err);
-      setMessage('An unexpected error occurred.');
+      setMessage('Turn on Aiven databse server or setup postgres database.');
     } finally {
       setLoading(false);
     }
