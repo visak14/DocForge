@@ -25,7 +25,7 @@ export default function ForgotPassword() {
       }
     } catch (error) {
        console.error('Registration error:', error);
-      setMessage(' An unexpected error occurred.');
+      setMessage('Turn on Aiven databse server or setup postgres database');
     } finally {
       setLoading(false);
     }
